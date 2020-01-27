@@ -18,8 +18,9 @@ public class BufferedReader_VS_Scanner {
      */
     public static void main(String[] args) throws IOException {
         CreazioneFile file = new CreazioneFile();
-        
+        Lettura_PopolazioneArray L= new Lettura_PopolazioneArray();
         file.creazioneFile();
+        L.letturaFile();
     }
     
 }
