@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class Lettura_PopolazioneArray {
 
-    public void letturaFile() throws FileNotFoundException {
+    public int[] letturaFile() throws FileNotFoundException {
         Scanner input = new Scanner(new File("File.txt"));
 
         int righe = 0;
@@ -32,15 +32,24 @@ public class Lettura_PopolazioneArray {
 
         input = new Scanner(new File("File.txt"));
         
+        long startTime = System.currentTimeMillis();
+        
         for (int i = 0; i < array.length; i++) {
             if (input.hasNextInt()) {
                 array[i] = input.nextInt();
             }
         }
         
+        System.out.println("il programma ci ha impiegato " + (System.currentTimeMillis()-startTime) + " millisecondi.");
+        
+        
+        return array;
+    }
+    
+    public void stampa (int [] array){
         //stampa array
         for (int i = 0; i < array.length; i++) {
-            System.out.println((i+1) + " numero: " + array[i]);
+        System.out.println((i+1) + " numero: " + array[i]);
         }
     }
 }
