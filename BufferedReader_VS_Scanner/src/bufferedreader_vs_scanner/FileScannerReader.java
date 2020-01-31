@@ -8,7 +8,7 @@ import java.util.Scanner;
  *
  * @author giussani.mirko
  */
-public class Lettura_PopolazioneArray {
+public class FileScannerReader {
 
     public int[] letturaFile() throws FileNotFoundException {
         Scanner input = new Scanner(new File("File.txt"));
@@ -40,7 +40,7 @@ public class Lettura_PopolazioneArray {
             }
         }
         
-        System.out.println("il programma ci ha impiegato " + (System.currentTimeMillis()-startTime) + " millisecondi.");
+        System.out.println("il programma ci ha impiegato " + (System.currentTimeMillis()-startTime) + " millisecondi. con Scanner");
         
         
         return array;

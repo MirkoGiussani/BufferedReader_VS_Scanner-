@@ -17,13 +17,15 @@ public class BufferedReader_VS_Scanner {
         Scanner input = new Scanner (System.in);
         
         CreazioneFile file = new CreazioneFile();
-        Lettura_PopolazioneArray L= new Lettura_PopolazioneArray();
+        FileScannerReader L= new FileScannerReader();
+        FileBufferedReader b = new FileBufferedReader();
         file.creazioneFile();
         
         int [] array = L.letturaFile();
+        b.letturaFile();
         System.out.print("vuoi stampare l'array sulla console? ");
         String scelta = input.nextLine().toLowerCase().trim();
-        if (scelta == "si"){        //non funziona questo if
+        if ("si".equals(scelta)){        
             L.stampa(array);
         }else {
             System.out.println("ok");
